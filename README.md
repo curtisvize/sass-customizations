@@ -1,6 +1,3 @@
-I'm Curtis, I like stuff. This is my professional github account, you can find my personal account @curtyv.
+This repository currently has one file (store_customizations.sass) but I may add more in the future or build this out into something more user-friendly.
 
-<!---
-curtisvize/curtisvize is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+The purpose is to have an accessible place where common requests for store customizations can be easily found and copy/pasted into a merchant's Sass code. A cheat sheet if you will.
