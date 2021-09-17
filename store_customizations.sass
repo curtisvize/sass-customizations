@@ -1,0 +1,113 @@
+/*----------------*/
+/* B2C Storefront */
+/*----------------*/
+
+//Hide opt-in section on checkout page
+div.opt-in
+    display: none
+
+
+//Caps on all buttons
+.btn
+    text-transform: uppercase
+
+
+//Hide empty cart image
+#mainContent.cart.container div#empty-cart-page.row div.col-xs-12.col-sm-3
+    display: none
+
+
+//Card thumbnail fix for darker colored backgrounds
+.thumbnail
+    background-color: transparent
+
+
+//Hide card type line item for bonus cards on cart page
+div#mainContent.cart.container div.row div.col-sm-9 form div.section-block div.section-details.col-xs-12.col-sm-5 div table tbody tr:last-child
+    display: none
+
+
+//Hide flag icons on language menu
+//---Only apply to multi-language stores---
+.header-menu ul.navbar-nav li:first-child a.change-language img
+    display: none
+
+
+//Adjust logo for mobile widths
+//---YMMV, adjust the logo parameters and screen widths (adding more, if needed) as you need---
+@media screen and (min-width:371px) and (max-width:767px)
+    .navbar-brand
+        background-size: 200px auto
+        width: 200px
+        height: 56px
+
+@media screen and (max-width:370px)
+    .navbar-brand
+        background-size: 150px auto
+        width: 150px
+        height: 42px
+
+
+//Adjust footer text for smaller screens
+//---YMMV, adjust the screen widths and font sizes to optimize as needed for your implementation---
+footer
+    span.copyright-text, span.help-msg-text a
+        @media screen and (min-width: 347px) and (max-width: 459px)
+            font-size: 10px
+        @media screen and (max-width: 346px)
+            font-size: 8px
+
+
+/*--------------------------*/
+/* Responsive Balance Check */
+/*--------------------------*/
+
+//Hide email field on balance check page
+#balance-check-page .contact-info .col-xs-12
+    display: none
+
+
+/*--------------------*/
+/* Responsive Tracker */
+/*--------------------*/
+    
+//Hide contact us section on tracker page
+.container.track .row.combo-box .section.col-xs-12.col-sm-6.hidden-xs:nth-child(3),
+#tw-menu .navbar-nav .contact-us-btn,
+.container.track div.contact-us.hidden-xs
+    display: none
+
+
+/*----------------*/
+/* B2B Storefront */
+/*----------------*/
+
+//Adjust top margin on b2b pages to accommodate for larger header
+//---YMMV, adjust the margin amount to optimize as needed for the merchant's logo---
+#b2b_login_page, #register_page, #register_sent_page, #forget_password_page, #reset_password_page, #choose_personalize_page, #history_page, #cart_page, #checkout_page, #thankyou_page, #account_page    
+    margin-top: 20px
+
+
+//Hide registration messaging on confirmation page
+#register_sent_page .banner-message
+    display: none
+
+
+//Alternate b2b margin top, might also affect b2c?
+body > form > div.container, body > div.container
+    margin-top: 85px
+
+
+
+/*-------------------------------------*/
+/* 'Dark Mode' adjustments - i.e. dark */
+/*  backgrounds with light text        */
+/*-------------------------------------*/
+//Example stores -- Xanterra, Vudu, ***FIND MORE***
+//Highlight changes between dark vs light body and dark vs light preview box, don't forget differences on mobile views...
+
+//Future section - dark mode emails?
+
+//preview section subtitle - line 283 of page.sass, add the following color parameter
+.previewContainer .subTitle, .twSectionSidebar .subTitle, .container.checkout .twSectionSidebarWrapper > .subTitle
+    color: $preview-font-color
