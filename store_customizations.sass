@@ -6,32 +6,26 @@
 div.opt-in
     display: none
 
-
 //Caps on all buttons
 .btn
     text-transform: uppercase
-
 
 //Hide empty cart image
 #mainContent.cart.container div#empty-cart-page.row div.col-xs-12.col-sm-3
     display: none
 
-
 //Card thumbnail fix for darker colored backgrounds
 .thumbnail
     background-color: transparent
 
-
 //Hide card type line item for bonus cards on cart page
-div#mainContent.cart.container div.row div.col-sm-9 form div.section-block div.section-details.col-xs-12.col-sm-5 div table tbody tr:last-child
+div#mainContent.cart.container div.row div.col-sm-9 form div.section-block div.section-details.col-xs-12.col-sm-5 div table tbody tr:nth-child(2)
     display: none
-
 
 //Hide flag icons on language menu
 //---Only apply to multi-language stores---
 .header-menu ul.navbar-nav li:first-child a.change-language img
     display: none
-
 
 //Adjust logo for mobile widths
 //---YMMV, adjust the logo parameters and screen widths (adding more, if needed) as you need---
@@ -47,7 +41,6 @@ div#mainContent.cart.container div.row div.col-sm-9 form div.section-block div.s
         width: 150px
         height: 42px
 
-
 //Adjust footer text for smaller screens
 //---YMMV, adjust the screen widths and font sizes to optimize as needed for your implementation---
 footer
@@ -57,6 +50,13 @@ footer
         @media screen and (max-width: 346px)
             font-size: 8px
 
+//Custom background image for body
+//---YMMV, adjust color, image name, and image size to specs for your image
+//color is the hex code of whatever color to be displayed while the image is loading or if it can't be loaded for any reason
+//image size is in pixels width first, then height.
+//E.g. The example below is for an image that is 1200 pixels wide by 800 pixels high, adjust accordingly.
+body
+    background: #f5f5f5 url("../images/your_bg_image_here.png") left top/1200px 800px repeat !important
 
 /*--------------------------*/
 /* Responsive Balance Check */
@@ -66,17 +66,15 @@ footer
 #balance-check-page .contact-info .col-xs-12
     display: none
 
-
 /*--------------------*/
 /* Responsive Tracker */
 /*--------------------*/
-    
+
 //Hide contact us section on tracker page
 .container.track .row.combo-box .section.col-xs-12.col-sm-6.hidden-xs:nth-child(3),
 #tw-menu .navbar-nav .contact-us-btn,
 .container.track div.contact-us.hidden-xs
     display: none
-
 
 /*----------------*/
 /* B2B Storefront */
@@ -84,20 +82,20 @@ footer
 
 //Adjust top margin on b2b pages to accommodate for larger header
 //---YMMV, adjust the margin amount to optimize as needed for the merchant's logo---
-#b2b_login_page, #register_page, #register_sent_page, #forget_password_page, #reset_password_page, #choose_personalize_page, #history_page, #cart_page, #checkout_page, #thankyou_page, #account_page    
-    margin-top: 20px
-
+body > form > div.container, body > div.container
+    margin-top: 50px
 
 //Hide registration messaging on confirmation page
 #register_sent_page .banner-message
     display: none
 
-
 //Alternate b2b margin top, might also affect b2c?
 body > form > div.container, body > div.container
     margin-top: 85px
 
-
+//Registration page checkbox fix - only needed for short labels, if the label extends two lines or more this is not needed
+#register_page #terms-section > div > label[for="tandc"]
+    display: block
 
 /*-------------------------------------*/
 /* 'Dark Mode' adjustments - i.e. dark */
