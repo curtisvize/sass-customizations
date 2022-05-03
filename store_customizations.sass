@@ -10,6 +10,15 @@ div.opt-in
 .btn
     text-transform: uppercase
 
+//Force border radius on all amount and category buttons
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle),
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.btn-group>.btn:last-child:not(:first-child),
+.btn-group>.btn-group:last-child>.btn:first-child,
+.btn-group>.btn-group:first-child>.btn:last-child,
+.btn-group>.btn-group:not(:first-child):not(:last-child)>.btn
+    border-radius: $default-border-radius
+
 //Hide empty cart image
 #mainContent.cart.container div#empty-cart-page.row div.col-xs-12.col-sm-3
     display: none
