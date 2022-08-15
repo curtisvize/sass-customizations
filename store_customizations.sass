@@ -50,6 +50,29 @@ div#mainContent.cart.container div.row div.col-sm-9 form div.section-block div.s
         width: 150px
         height: 42px
 
+//Footer copyright text hack for B2C
+@media screen and (min-width:768px)
+    footer .container > span.copyright-text
+        display: none
+
+@media screen and (max-width:767px)
+    footer .container > span.copyright-text
+        font-size: 0px
+
+        &:before
+            font-size: 10px
+            padding-right: 10px
+            border-right: 1px solid $sonic-font-color
+            content: "Custom Copyright Text Goes Here"
+
+    footer .container
+        span.help-msg-icon, span.help-msg-text, span.support-faq-link
+            font-size: 10px
+        span > a
+            font-size: 10px
+        span.help-msg-text
+            padding-left: 0px
+
 //Adjust footer text for smaller screens
 //---YMMV, adjust the screen widths and font sizes to optimize as needed for your implementation---
 footer
